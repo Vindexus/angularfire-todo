@@ -6,12 +6,11 @@ var autoprefixer                            = require('autoprefixer');
 var HtmlWebpackPlugin                       = require('html-webpack-plugin');
 var ExtractTextPlugin                       = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin                       = require('copy-webpack-plugin');
+var todoLib                                 = require('angularfire-todo-lib');
 
-var env                                     = require('./lib/env');
+var env = todoLib.env;
 
 const devPort = 3030;
-global.__base = __dirname + '/';
-
 
 module.exports = function makeWebpackConfig () {
   /**

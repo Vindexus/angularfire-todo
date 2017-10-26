@@ -1,4 +1,5 @@
-const usersUtil = require('../../../../lib/users/users.util');
+const todoLib = require('angularfire-todo-lib');
+const usersUtil = todoLib.usersUtil;
 
 /* @ngInject */
 function usersFactory ($firebaseArray) {

@@ -1,4 +1,5 @@
-const listUtil = require('../../../../lib/todos/list.util');
+const todoLib = require('angularfire-todo-lib');
+const listUtil = todoLib.listUtil;
 
 /* @ngInject */
 function ListFactory ($firebaseArray, $firebaseObject) {
