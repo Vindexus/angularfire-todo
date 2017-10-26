@@ -9,7 +9,7 @@ function usersFactory ($firebaseArray) {
       console.log('You cannot add users without using CLI.');
     };
 
-    this.updateUser = (user) => {
+    this.saveUser = (user) => {
       return this.$users.$save(user);
     }
   }

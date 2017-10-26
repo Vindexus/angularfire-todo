@@ -1,7 +1,12 @@
 h1 Users
 table
+  thead
+    tr
+      th Username
+      th Email
   tr(ng-repeat="user in users.list")
     td
-      input(ng-model="user.displayName")
+      input(ng-model="user.username")
+    td {{user.email}}
     td
       button.btn(ng-click="users.saveUser(user)") Save
