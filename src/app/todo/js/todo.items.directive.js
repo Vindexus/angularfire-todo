@@ -1,5 +1,5 @@
 /* @ngInject */
-module.exports = function (listFactory) {
+module.exports = function (listFactory, usersFactory) {
   return {
     restrict: 'E',
     scope: {
@@ -8,9 +8,14 @@ module.exports = function (listFactory) {
     template: require('../views/items.pug'),
     link: function ($scope) {
       const listManager = listFactory($scope.id);
-      $scope.items = listManager.$items;
+      const usersManager = usersFactory($scope.id);
+      usersManager.scopeWatcher($scope);
+      listManager.scopeWatcher($scope);
       $scope.updateItem = function (item) {
-        listManager.updateItem(item);
+        listManager.updateItem(item).then((res) => {
+        })
+        .catch((err) => {
+        });
       }
     }
   }

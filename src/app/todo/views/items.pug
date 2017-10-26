@@ -1,6 +1,19 @@
-ul
-  li(ng-repeat="item in items")
-    input(type="checkbox" ng-model="item.done" ng-change="updateItem(item)")
-    strong {{item.id}}
-    input(type="text" ng-model="item.name" ng-change="updateItem(item);")
-    em(ng-show="item.done") DONE!
+table
+  tr
+    th ID
+    th
+    th Name
+    th User
+    th User status
+  tr(ng-repeat="item in items")
+    td
+      strong {{item.$id}}
+    td
+      input(type="checkbox" ng-model="item.done" ng-change="updateItem(item)")
+    td
+      input(type="text" ng-model="item.name" ng-change="updateItem(item)")
+    td
+      select(ng-options="option.id as option.label for option in userOptions" ng-model="item.uid" ng-change="updateItem(item)")
+    td {{itemUsers[item.$id].status}}
+    td
+      em(ng-show="item.done") DONE!
