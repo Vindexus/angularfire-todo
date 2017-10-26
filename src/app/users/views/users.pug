@@ -1,0 +1,7 @@
+h1 Users
+table
+  tr(ng-repeat="user in users.list")
+    td
+      input(ng-model="user.displayName")
+    td
+      button.btn(ng-click="users.saveUser(user)") Save

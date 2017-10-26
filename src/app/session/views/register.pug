@@ -1,0 +1,8 @@
+form(ng-submit="register.submit()")
+  div(ng-show="register.error" style="padding: 10px; border: 1px solid red;") {{register.error}}
+  .form-group
+    input.form-control(ng-model="register.email" type="email" placeholder="Email")
+  .form-group
+    input.form-control(ng-model="register.password" type="password" placeholder="Password")
+  .form-group
+    button.btn Submit

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angularfire Todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-app="angularfire-todo" ng-strict-di >
+<nav></nav>
+<main class="container">
+    <div ng-if="currentUser">
+      {{currentUser.uid}}
+    </div>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/todos">Todo</a></li>
+      <li><a href="/users">Users</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+    <ui-view></ui-view>
+</main>
+</body>
+</html>

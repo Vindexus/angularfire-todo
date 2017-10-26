@@ -1,0 +1,6 @@
+ul
+  li(ng-repeat="item in items")
+    input(type="checkbox" ng-model="item.done" ng-change="updateItem(item)")
+    strong {{item.id}}
+    input(type="text" ng-model="item.name" ng-change="updateItem(item);")
+    em(ng-show="item.done") DONE!

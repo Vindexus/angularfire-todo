@@ -1,0 +1,6 @@
+h1 All Todo Lists
+button(ng-click="todos.addList()") Add List
+
+ul
+  li(ng-repeat="list in todos.lists")
+    a(href="/todos/{{list.$id}}") {{list.name}}
